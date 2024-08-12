@@ -1,0 +1,41 @@
+/* Certifications.css */
+
+#certifications {
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #2c3e50;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #ff9c07;
+}
+
+/* .btn-primary {
+  background-color: #e67e22;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #d35400;
+} */
+
+.card-cert{
+    height: 100%;
+}
+
+h3{
+  color:#2c3e50;
+  font-weight:bold;
+}

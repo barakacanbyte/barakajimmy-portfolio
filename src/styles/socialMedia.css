@@ -1,0 +1,12 @@
+#social-media {
+  padding: 10px 0;
+}
+
+.social-icon {
+  color: #5e5c5c;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #f39c12;
+}

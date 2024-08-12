@@ -1,0 +1,254 @@
+:root {
+  --primary-color: black;
+  --secondary-color: #ff9c07;
+  --accent-color: #e74c3c;
+  --background-color: #f7f7f7;
+  --text-color: #2c3e50;
+  --font-family: "Ubuntu", sans-serif;
+  --font-size-1: 24px;
+  --font-size-2: 26px;
+  --font-size-4: 2rem;
+  --heading-font-size: 2em;
+  --container-size-1: 25rem;
+  --container-size-2: 23rem;
+  --container-size-3: 19rem;
+  --container-size-4: 16rem;
+  --border-cirlce: 30.5%;
+}
+
+body {
+  font-family: var(--font-family);
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  /* width: 100%; */
+}
+
+/* #about{
+  display: block;
+  position: relative;
+}
+
+#skills{
+  position: relative;
+  display: block;
+} */
+
+/* .text-orange{
+    color: orangered;
+} */
+
+/* .background-hover a{
+  transition: background-color 0.3s ease;
+} */
+
+/* header */
+
+.background-hover a {
+  position: relative;
+  margin: 0 1rem;
+  padding: 0 1px;
+  overflow: hidden;
+  z-index: 1;
+  border-bottom: 3px solid var(--secondary-color);
+  font-weight: bold;
+  color: var(--primary-color);
+  /* font-size: var(--font-size-1); */
+}
+
+/* .navbar-brand {
+  /* font-size: var(--font-size-2); */
+/* } */
+
+.background-hover a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--secondary-color);
+  transition: height 0.3s ease;
+  z-index: -1;
+}
+
+.background-hover a:hover::before {
+  height: 100%;
+}
+
+.contact:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+/* .background-hover a:hover {
+  color: white;
+  z-index: 1;
+} */
+
+/* .background-hover a:hover {circle-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--container-size-1);
+  height: var(--container-size-1);
+  background-color: #f8f9fa;
+  border-radius: 50%;
+}
+
+.circle-image {
+  width: var(--container-size-2);
+  height: var(--container-size-2);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.text{
+  font-weight: bold;
+}
+
+.text-orange{
+  color: var(--secondary-color);
+}
+  background-color: #FFC107;
+} */
+
+/* about----------------------------------------------------------- */
+
+.circle-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--container-size-1);
+  height: var(--container-size-1);
+  background-color: #f8f9fa;
+  border-radius: 50%;
+}
+
+.circle-image {
+  width:100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  /* border:3px solid var(--secondary-color) */
+  /* box-shadow: 0 1px 8px 0 var(--secondary-color); */
+}
+
+
+
+.text {
+  font-weight: bold;
+}
+
+.text-orange {
+  color: var(--secondary-color);
+}
+
+/* Skills------------------------------------------ */
+/* .icon{
+  max-width: 4rem;
+} */
+
+#skills {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+}
+
+.section-title {
+  color: #2c3e50;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.skill-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  max-width: 60px;
+}
+
+.application {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* #skills{
+  background-color: rgba(253, 174, 70, 0.596);
+}
+
+.skill-card {
+  height: 100%;
+  width: 100%;
+}
+
+.skill-card span{
+  color: var(--secondary-color);
+} */
+
+/* foooter-------------------------------------------------------------*/
+
+footer {
+  position: relative;
+  width: 100%;
+  bottom: -1;
+  margin-bottom: -100px;
+  /* height: 100px; */
+}
+
+/* responsiveness --------------------------------------------------------*/
+@media (max-width: 576px) {
+  .circle-background {
+    width: var(--container-size-3);
+    height: var(--container-size-3);
+  }
+
+  .circle-image {
+    width: var(--container-size-4);
+    height: var(--container-size-4);
+  }
+}
+
+/* Large screens */
+/* @media (min-width: 992px) {
+      .circle-background {
+        width: 140px;
+        height: 140px;
+      }
+
+      .circle-image {
+        width: 120px;
+        height: 120px;
+      }
+    } */
+
+/* Extra large screens */
+/* @media (min-width: 1200px) {
+      .circle-background {
+        width: 160px;
+        height: 160px;
+      }
+
+      .circle-image {
+        width: 140px;
+        height: 140px;
+      }
+    } */
