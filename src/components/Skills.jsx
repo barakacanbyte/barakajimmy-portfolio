@@ -10,7 +10,7 @@ const languages = [
   {
     title: "Javascript",
     application: "Backend and Frontend",
-    icon: "https:cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg",
   },
   {
     title: "Python",
@@ -18,16 +18,26 @@ const languages = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
   },
   {
-    title: "SQL",
+    title: "",
+    application: "Backend",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg",
+  },
+  {
+    title: "",
     application: "Relational Database",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+  },
+  {
+    title: "Solidity",
+    application: "Smart Contracts",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/solidity/solidity-original.svg",
   },
 ];
 
   const frameworks = [
     {
-      title: "React & React Native",
-      application: "Frontend & Mobile",
+      title: "React",
+      application: "Frontend",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
     },
     {
@@ -36,14 +46,14 @@ const languages = [
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
     },
     {
-      title: "Django",
+      title: "Django & Django Rest",
       application: "Backend",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
     },
     {
-      title: "Bootstrap",
-      application: "Frontend",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
+      title: "Next.JS",
+      application: "Frontend & Backend",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
     },
   ];
 

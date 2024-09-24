@@ -4,13 +4,8 @@ import "../styles/certifications.css";
 
 const certifications = [
   {
-    title: "Computer Science",
-    description: "Sophomore",
-  },
-  {
     title: "Data Analysis With python",
     description: "datacamp.com",
-    // link: "https://example.com/certification2",
   },
   {
     title: "Responsive Web Design",
@@ -24,7 +19,6 @@ const certifications = [
     title: "AI Career Essentials",
     description: "ALX Africa",
   },
-  // Add more certifications as needed
 ];
 
 const Certifications = () => {

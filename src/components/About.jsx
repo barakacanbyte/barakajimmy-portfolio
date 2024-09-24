@@ -11,10 +11,10 @@ const About = () => (
         />
       </div>
       <p className="lead text">
-        Hey, I'm <span className="text-orange">Baraka Mangesho</span>, I have a
-        passion for creating visually engaging designs. I also strive to build
-        innovative solutions and bring ideas to life with creativity. Dive in
-        and see what I've been up to!
+        Hey, I'm <span className="text-orange">Baraka Mangesho</span>. I have a
+        passion for developing innovative solutions, I'm also exploring the world of blockchain
+        development, blending creativity with cutting-edge technology to bring
+        ideas to life. Dive in and explore what I've been up to!
       </p>
     </div>
   </section>
