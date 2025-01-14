@@ -23,14 +23,14 @@ const languages = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg",
   },
   {
-    title: "",
-    application: "Relational Database",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
-  },
-  {
     title: "Solidity",
     application: "Smart Contracts",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/solidity/solidity-original.svg",
+  },
+  {
+    title: "Rust",
+    application: "Blockchain Development",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg",
   },
 ];
 
