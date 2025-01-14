@@ -93,7 +93,7 @@ const Projects = () => {
         </Row>
       </section>
       <section className="mt-5">
-        <h4 className="text-success">Data Analysis Projects</h4>
+        <h4 className="text-success">Blockchain Development Projects</h4>
         <em>****** TBA ******</em>
         {/* <Row className="mx-auto">
           {projects.dataAnalysis.map((project, index) => (
