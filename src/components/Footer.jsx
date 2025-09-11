@@ -6,7 +6,7 @@ const Footer = () => (
     <h4 className="text-secondary">Check me via these platforms:</h4>
     <SocialMedia />
     <hr/>
-    <p>&copy; 2024. barakacanbyte </p>
+    <p>&copy; 2025 manoftomorrow.eth </p>
   </footer>
 );
 

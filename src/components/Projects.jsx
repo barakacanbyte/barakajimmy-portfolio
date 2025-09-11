@@ -35,6 +35,16 @@ const projects = {
     },
     // Add more data analysis projects
   ],
+  currentProject: [
+    {
+      title: "NedaPay",
+      description: "Part of the NedaPay Product Team. NedaPay is a platform that facilitates stablecoins transactions including payment links, swaps, invoices, on/offramps for you and your business.",
+      technologies: "Javascript, Typescript, Web3, Solidity, NextJs",
+      image: "https://res.cloudinary.com/dglqu5yh3/image/upload/v1757572796/main-portfolio/Screenshot_from_2025-09-11_09-36-24_f60skg.png",
+      demoLink: "https://nedapay.xyz",
+    },
+    // Add more current projects
+  ]
 };
 
 const Projects = () => {
@@ -42,7 +52,14 @@ const Projects = () => {
     <Container id="projects" className="my-5">
       <h3 className="mb-4">Projects</h3>
       <section className="mx-auto">
-        <h4 className="text-success">Programming Projects</h4>
+        {/* <h4 className="text-success">Projects</h4> */}
+        <Row className="mx-auto">
+          {projects.currentProject.map((project, index) => (
+            <Col key={index} xs={12} md={6} lg={6} className="mx-auto my-2">
+              <ProjectCard project={project} />
+            </Col>
+          ))}
+        </Row>
         <Row className="mx-auto">
           {projects.programming.map((project, index) => (
             <Col key={index} xs={12} md={6} lg={6} className="mx-auto my-2">
@@ -51,7 +68,7 @@ const Projects = () => {
           ))}
         </Row>
       </section>
-      <section className="mt-5 mx-auto p-4">
+      {/* <section className="mt-5 mx-auto p-4">
         <h4 className="text-success">Graphics Design Portfolio</h4>
         <Row>
           <Card>
@@ -91,18 +108,7 @@ const Projects = () => {
             </Card.Body>
           </Card>
         </Row>
-      </section>
-      <section className="mt-5">
-        <h4 className="text-success">Blockchain Development Projects</h4>
-        <em>****** TBA ******</em>
-        {/* <Row className="mx-auto">
-          {projects.dataAnalysis.map((project, index) => (
-            <Col key={index} xs={12} md={6} lg={4} className="mx-auto">
-              <ProjectCard project={project} />
-            </Col>
-          ))}
-        </Row> */}
-      </section>
+      </section> */}
     </Container>
   );
 };

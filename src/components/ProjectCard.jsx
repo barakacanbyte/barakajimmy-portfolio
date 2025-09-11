@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
             rel="noopener noreferrer"
             className="button-view1"
           >
-            Live Demo
+            Live showcase
           </Button>
         )}
         {project.codeLink && (
