@@ -1,52 +1,52 @@
-import React from "react";
-import { Card, Button } from "react-bootstrap";
-import "../styles/certifications.css";
+import { certifications } from "../data/portfolioData";
+import SectionHeader from "./SectionHeader";
 
-const certifications = [
-  {
-    title: "Data Analysis With python",
-    description: "datacamp.com",
-  },
-  {
-    title: "Responsive Web Design",
-    description: "freecodecamp.com",
-  },
-  {
-    title: "Javascript Algorithms and Data Structure",
-    description: "freecodecamp.com",
-  },
-  {
-    title: "AI Career Essentials",
-    description: "ALX Africa",
-  },
-];
+const Certifications = () => (
+  <section id="certifications" className="py-12 sm:py-16 md:py-20">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader title="Certifications" number="02" />
 
-const Certifications = () => {
-  return (
-    <section id="certifications" className="container my-5">
-      <h3 className="mb-4">Certifications</h3>
-      <div className="row p-2">
+      <div className="space-y-8 sm:space-y-12">
         {certifications.map((cert, index) => (
-          <div key={index} className="col-md-6 mb-4">
-            <Card className="w-100 card-cert p-2">
-              <Card.Body>
-                <Card.Title>{cert.title}</Card.Title>
-                <Card.Text>{cert.description}</Card.Text>
-                {/* <Button
-                  variant="primary"
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Certification
-                </Button> */}
-              </Card.Body>
-            </Card>
+          <div
+            key={cert.title}
+            className="flex flex-col lg:grid lg:grid-cols-3 gap-6 lg:gap-8"
+          >
+            <div className="lg:col-span-1">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-2 text-black">
+                {cert.period}
+              </h3>
+              <h4 className="text-lg sm:text-xl font-normal text-primary">
+                {cert.title}
+              </h4>
+            </div>
+
+            <div
+              className={`lg:col-span-1 ${
+                index < certifications.length - 1 ? "timeline-line" : ""
+              } pl-7 relative`}
+            >
+              <div className="absolute left-0 top-0 -translate-x-1/2 w-3.5 h-3.5 border-primary bg-white rounded-full flex items-center justify-center border">
+                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+              </div>
+              <div>
+                <span className="text-xl block mb-1 text-primary">
+                  {cert.issuer}
+                </span>
+                <p className="text-secondary text-base">Professional learning</p>
+              </div>
+            </div>
+
+            <div className="lg:col-span-1 lg:pl-8">
+              <p className="text-secondary text-base leading-relaxed">
+                {cert.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Certifications;

@@ -1,36 +1,27 @@
-import React from "react";
+import { profile } from "../data/portfolioData";
+import SectionHeader from "./SectionHeader";
+
+const bgImg = `${import.meta.env.BASE_URL}images/home/about-me/resume-bg-img.svg`;
 
 const About = () => (
-  <section id="about" className="container my-5">
-    <div className="container-lg mt-5 text-center">
-      <div className="circle-background mx-auto mb-4">
-        <img
-          src="https://res.cloudinary.com/dglqu5yh3/image/upload/v1723445097/main-portfolio/about_pic_cf06im.png"
-          alt="Circular Image"
-          className="circle-image mt-5"
-        />
+  <section
+    id="about"
+    className="bg-muted py-12 sm:py-16 md:py-20 relative overflow-hidden"
+  >
+    <div className="absolute top-0 w-full px-4 sm:px-9 pointer-events-none opacity-40">
+      <img src={bgImg} alt="" className="w-full h-auto" />
+    </div>
+
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <SectionHeader title="About Me" number="01" />
+
+      <div className="max-w-3xl">
+        <p className="text-secondary text-base sm:text-lg whitespace-pre-line">
+          {profile.about}
+        </p>
       </div>
-      <p className="lead text">
-        Hey, I'm <span className="text-orange">Baraka Mangesho</span>. I have a
-        passion for developing innovative solutions, I'm also exploring the world of blockchain
-        development, blending creativity with cutting-edge technology to bring
-        ideas to life. Dive in and explore what I've been up to!
-      </p>
     </div>
   </section>
-  // <section id="about" className="container my-5">
-  //   <div className="container-lg mt-5">
-  //     <div className="circle-background mx-auto">
-  //       <img src="" alt="Circular Image" className="circle-image" />
-  //     </div>
-  //     <p className="lead text mt-5">
-  //       Hey, I'm <span className="text-orange">Baraka Mangesho</span>, I have a
-  //       passion for creating visually engaging designs. I also strive to build
-  //       innovative solutions and bring ideas to life with creativity. Dive in
-  //       and see what I've been up to!
-  //     </p>
-  //   </div>
-  // </section>
 );
 
 export default About;

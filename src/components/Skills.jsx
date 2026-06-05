@@ -1,211 +1,47 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { skillCategories } from "../data/portfolioData";
+import SectionHeader from "./SectionHeader";
 
-const languages = [
-  {
-    title: "Java",
-    application: "Backend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
-  },
-  {
-    title: "Javascript",
-    application: "Backend and Frontend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg",
-  },
-  {
-    title: "Python",
-    application: "Backend and Data Analysis",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-  },
-  {
-    title: "",
-    application: "Backend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg",
-  },
-  {
-    title: "Solidity",
-    application: "Smart Contracts",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/solidity/solidity-original.svg",
-  },
-  {
-    title: "Rust",
-    application: "Blockchain Development",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg",
-  },
-];
+const vectorImg = `${import.meta.env.BASE_URL}images/home/education-skill/edu-skill-vector.svg`;
 
-  const frameworks = [
-    {
-      title: "React",
-      application: "Frontend",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    },
-    {
-      title: "Express",
-      application: "Backend",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
-    },
-    {
-      title: "Django & Django Rest",
-      application: "Backend",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
-    },
-    {
-      title: "Next.JS",
-      application: "Frontend & Backend",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-    },
-  ];
-
-  const graphicToolset = [
-    {
-      title: "Photoshop",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
-    },
-    {
-      title: "Illustrator",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg",
-    },
-    {
-      title: "Canva",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg",
-    }
-  ];
-      
+const SkillPill = ({ name, icon }) => (
+  <div className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 border border-muted rounded-full bg-white hover:border-primary transition-colors duration-300">
+    {icon && (
+      <i className={`${icon} text-base sm:text-lg text-primary`} aria-hidden />
+    )}
+    <span className="text-sm sm:text-base text-secondary font-medium">{name}</span>
+  </div>
+);
 
 const Skills = () => (
-  <section id="skills" className="my-5">
-    <Container>
-      <div className="mb-5">
-        <h3 className="section-title">Programming Languages</h3>
-        <Row className="d-flex justify-content-center">
-          {languages.map((language, index) => (
-            <Col key={index} xs={6} sm={6} md={4} lg={3} className="mb-4">
-              <div className="skill-card text-center p-4">
-                <img
-                  src={language.icon}
-                  alt={"image of " + language.title}
-                  className="icon img-fluid mb-3"
+  <section id="skills" className="border-t border-muted overflow-hidden">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 relative">
+      <img
+        src={vectorImg}
+        alt=""
+        className="absolute top-0 left-0 -translate-y-1/2 w-48 sm:w-60 h-auto hidden sm:block pointer-events-none"
+      />
+      <SectionHeader title="Skills" number="03" />
+
+      <div className="max-w-3xl mx-auto space-y-8 sm:space-y-10">
+        {skillCategories.map((category) => (
+          <div key={category.title}>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-3 sm:mb-4">
+              {category.title}
+            </h3>
+            <div className="flex flex-wrap gap-2 sm:gap-3">
+              {category.items.map((skill) => (
+                <SkillPill
+                  key={skill.name}
+                  name={skill.name}
+                  icon={skill.icon}
                 />
-                <strong>{language.title}</strong>
-                <p>
-                  Application:{" "}
-                  <span className="application">{language.application}</span>
-                </p>
-              </div>
-            </Col>
-          ))}
-        </Row>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="mb-5">
-        <h3 className="section-title">Frameworks</h3>
-        <Row className="d-flex justify-content-center">
-          {frameworks.map((framework, index) => (
-            <Col key={index} xs={6} sm={6} md={4} lg={3} className="mb-4">
-              <div className="skill-card text-center p-4">
-                <img
-                  src={framework.icon}
-                  alt={"image of " + framework.title}
-                  className="icon img-fluid mb-3"
-                />
-                <strong>{framework.title}</strong>
-                <p>
-                  Application:{" "}
-                  <span className="application">{framework.application}</span>
-                </p>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </div>
-      <div>
-        <h3 className="section-title">Graphics Design Toolset</h3>
-        <Row className="d-flex justify-content-center">
-          {graphicToolset.map((tool, index) => (
-            <Col key={index} xs={6} sm={6} md={4} lg={3} className="mb-4">
-              <div className="skill-card text-center p-4">
-                <img
-                  src={tool.icon}
-                  alt={"image of " + tool.title}
-                  className="icon img-fluid mb-3"
-                />
-                <strong>{tool.title}</strong>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </div>
-    </Container>
+    </div>
   </section>
-  // <section
-  //   id="skills"
-  //   className="container my-5 rounded"
-  //   // style={{ height: 100 + "vh" }}
-  // >
-  //   <div>
-  //     <h3 className="text-success">Programming Languages</h3>
-  //     <Row className=" d-flex justify-content-between mx-auto ps-4">
-  //       {languages.map((language, index) => (
-  //         <Col key={index} xs={6} md={4} lg={3} className="mb-3">
-  //           <div className="skill-card p-1 border border-3 border-warning border-dark rounded row">
-  //             <img
-  //               src={language.icon}
-  //               alt={"image of" + language.title}
-  //               className="icon img-fluid mx-auto"
-  //             />
-  //             <strong>{language.title}</strong>
-  //             <p className="">
-  //               Application:{" "}
-  //               <span className="fw-bold text-success">
-  //                 {language.application}
-  //               </span>
-  //             </p>
-  //           </div>
-  //         </Col>
-  //       ))}
-  //     </Row>
-  //   </div>
-  //   <div>
-  //     <h3 className="text-success">Frameworks</h3>
-  //     <Row className=" d-flex justify-content-between mx-auto ps-4">
-  //       {frameworks.map((language, index) => (
-  //         <Col key={index} xs={6} md={4} lg={3} className="mb-3">
-  //           <div className="skill-card p-1 border border-3 border-warning border-dark rounded row">
-  //             <img
-  //               src={language.icon}
-  //               alt={"image of" + language.title}
-  //               className="icon img-fluid mx-auto"
-  //             />
-  //             <strong>{language.title}</strong>
-  //             <p className="">
-  //               Application:{" "}
-  //               <span className="fw-bold text-success">
-  //                 {language.application}
-  //               </span>
-  //             </p>
-  //           </div>
-  //         </Col>
-  //       ))}
-  //     </Row>
-  //   </div>
-  //   <div>
-  //     <h3 className="text-success">Graphics Design Toolset </h3>
-  //     <Row className=" d-flex justify-content-between mx-auto ps-4">
-  //       {graphicToolset.map((language, index) => (
-  //         <Col key={index} xs={6} md={4} lg={3} className="mb-3">
-  //           <div className="skill-card p-1 border border-3 border-warning border-dark rounded row">
-  //             <img
-  //               src={language.icon}
-  //               alt={"image of" + language.title}
-  //               className="icon img-fluid mx-auto"
-  //             />
-  //             <strong>{language.title}</strong>
-  //           </div>
-  //         </Col>
-  //       ))}
-  //     </Row>
-  //   </div>
-  // </section>
 );
 
 export default Skills;
