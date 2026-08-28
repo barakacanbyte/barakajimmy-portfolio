@@ -2,7 +2,7 @@ export const profile = {
   name: "Baraka",
   fullName: "Baraka Mangesho",
   title: "Software Developer",
-  heroRole: "Software Developer",
+  heroRole: "Software Developer and Aspiring Author",
   heroLearning:
     "Practising and sharpening my skills on DevOps and Cyber Security",
   tagline: "i build and explore on Blockchain/Web3",
@@ -84,21 +84,20 @@ export const skillCategories = [
 
 export const projects = [
   {
-    name: "Amini",
-    description:
-      "Personal side project (in progress) — Amini is a transparent fund disbursement protocol on Base. Every contribution is streamed on-chain and every milestone is attested on EAS, turning charitable giving from blind faith into verified impact.",
-    url: "https://amini-project.vercel.app/",
-    codeUrl: null,
-    tech: ["Web3", "Stablecoins", "Bun", "XMTP", "TypeScript", "Solidity"],
-    image: projectImage("amini-desktop.png"),
-  },
-  {
     name: "NEDAPAY",
     description:
-      "NEDApay is a borderless payments platform built on Base. It lets you send money to anyone in the world in seconds.",
+      "NEDApay is a borderless payments platform built on Base. It lets you send money to anyone in the world in seconds, available on web, iOS, and Android.",
+    role: "My role: built the web app, iOS and Android apps, and backend — plus system design and DevOps for the product.",
     url: "https://nedapay.xyz",
     codeUrl: null,
-    tech: ["Node.js", "TypeScript", "Web3", "Stablecoins", "Solidity"],
-    image: projectImage("nedapay-mobile.png"),
+    tech: ["Node.js", "TypeScript", "Web3", "Stablecoins", "Solidity", "iOS", "Android"],
+    images: [
+      projectImage("nedapay-app-home-1.png"),
+      projectImage("nedapay-app-home-2.png"),
+      projectImage("nedapay-app-pay.png"),
+      projectImage("nedapay-app-swap.png"),
+      projectImage("nedapay-app-deposit.png"),
+      projectImage("nedapay-app-biashara.png"),
+    ],
   },
 ];

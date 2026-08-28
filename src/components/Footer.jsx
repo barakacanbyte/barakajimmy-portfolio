@@ -1,3 +1,12 @@
+import { profile } from "../data/portfolioData";
+
+const socialLinks = [
+  { href: profile.github, icon: "fa-github", label: "GitHub" },
+  { href: profile.linkedin, icon: "fa-linkedin", label: "LinkedIn" },
+  { href: profile.medium, icon: "fa-medium", label: "Medium" },
+  { href: profile.whatsapp, icon: "fa-whatsapp", label: "WhatsApp" },
+];
+
 const Footer = () => {
   const year = new Date().getFullYear();
 
@@ -13,6 +22,20 @@ const Footer = () => {
               </span>
             </div>
             <div className="flex-grow h-px bg-black" />
+          </div>
+          <div className="flex items-center gap-5 mt-4">
+            {socialLinks.map(({ href, icon, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="text-secondary hover:text-primary transition-colors"
+              >
+                <i className={`fa-brands ${icon} text-xl`} />
+              </a>
+            ))}
           </div>
           <p className="text-secondary mt-4 text-center">© {year}</p>
         </div>
